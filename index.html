@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="items">
+    <div class="item active">
+        <img class="img" width="250" height="200" loading=lazy alt="pizza Algérienne"
+             src="https://five-pizza-original.fr/wp-content/uploads/2021/01/Algérienne.png"/>
+        <h2 style="text-align: center">Algérienne</h2>
+        <div class="pizza active">
+            <div style="text-align: center" class="textMenu">M : 5,50€ | L : 9,90€</div>
+            <p style="text-align: center" class="textMenu">Sauce algérienne, viande hachée, merguez, poivrons,
+                olives.</p>
+        </div>
+    </div>
+    <div class="item next">
+        <img class="img" width="250" height="200" loading=lazy alt="pizza Américaine"
+             src="https://five-pizza-original.fr/wp-content/uploads/2021/01/Americaine.png"/>
+        <h2>Américaine</h2>
+        <div class="pizza next">
+            <div class="textMenu">M : 5,50€ | L : 9,90€</div>
+            <p class="textMenu">Sauce américaine, viande hachée, boursin, poivrons.</p>
+        </div>
+    </div>
+    <div class="item next1">
+        <img class="img" width="250" height="200" loading=lazy alt="pizza Antillaise"
+             src="https://five-pizza-original.fr/wp-content/uploads/2021/01/Antillaise-min.png"/>
+        <h2>Antillaise</h2>
+        <div class="pizza">
+            <div class="textMenu">M : 5,50€ | L : 9,90€</div>
+            <p class="textMenu">Sauce columbo, viande hachée, poulet, champignons, olives.</p>
+        </div>
+    </div>
+    <div class="item">
+        <img class="img" width="250" height="200" loading=lazy alt="pizza Buffalo"
+             src="https://five-pizza-original.fr/wp-content/uploads/2021/01/Buffalo-min.png"/>
+        <h2>Buffalo</h2>
+        <div class="pizza">
+            <div class="textMenu">M : 5,50€ | L : 9,90€</div>
+            <p class="textMenu">Sauce barbecue, poivrons, viande hachée, oignons.</p>
+        </div>
+    </div>
+    <div class="item">
+        <img class="img" width="250" height="200" loading=lazy alt="pizza Bollywood"
+             src="https://five-pizza-original.fr/wp-content/uploads/2021/01/Bollywood-min.png"/>
+        <h2>Bollywood</h2>
+        <div class="pizza prev">
+            <div class="textMenu">M : 5,50€ | L : 9,90€</div>
+            <p class="textMenu">Sauce curry, crème fraîche, poulet, oignons, poivrons.</p>
+        </div>
+    </div>
+    <div class="item">
+        <img class="img" width="250" height="200" loading=lazy alt="pizza Indienne"
+             src="https://five-pizza-original.fr/wp-content/uploads/2021/01/Indienne.png"/>
+        <h2>Indienne</h2>
+        <div class="pizza">
+            <div class="textMenu">M : 5,50€ | L : 9,90€</div>
+            <p class="textMenu">Sauce curry, viande hachée, poulet tikka, maïs.</p>
+        </div>
+    </div>
+    <div class="item">
+        <img class="img" width="250" height="200" loading=lazy alt="pizza Miel"
+             src="https://five-pizza-original.fr/wp-content/uploads/2021/01/Miel-min.png"/>
+        <h2>La miel</h2>
+        <div class="pizza">
+            <div class="textMenu">M : 5,50€ | L : 9,90€</div>
+            <p class="textMenu">Miel, crème fraîche, dinde, merguez, poivrons.</p>
+        </div>
+    </div>
+    <div class="item">
+        <img class="img" width="250" height="200" loading=lazy alt="pizza Boursin"
+             src="https://five-pizza-original.fr/wp-content/uploads/2021/01/Boursin-min.png"/>
+        <h2>La boursin</h2>
+        <div class="pizza">
+            <div class="textMenu">M : 5,50€ | L : 9,90€</div>
+            <p class="textMenu">Boursin, crème fraîche, poulet, champignons.</p>
+        </div>
+    </div>
+    <div class="item prev1">
+        <img class="img" width="250" height="200" loading=lazy alt="pizza Bolognaise"
+             src="https://five-pizza-original.fr/wp-content/uploads/2021/01/regina_optimized.png"/>
+        <h2>La bolognaise</h2>
+        <div class="pizza">
+            <div class="textMenu">M : 5,50€ | L : 9,90€</div>
+            <p class="textMenu">Sauce bolognaise, viande hachée, oignons.</p>
+        </div>
+    </div>
+    <div class="item prev">
+        <img class="img" width="250" height="200" loading=lazy alt="pizza Pimento"
+             src="https://five-pizza-original.fr/wp-content/uploads/2021/01/Pimento.png"/>
+        <h2>Pimento</h2>
+        <div class="pizza prev">
+            <div class="textMenu">M : 5,50€ | L : 9,90€</div>
+            <p class="textMenu">Sauce chili thaï, poulet, chorizo, piment, olives.</p>
+        </div>
+    </div>
+    <div class="button-container">
+        <div class="button"><p>&#139;</p></div>
+        <div class="button"><p>&#155;</p></div>
+    </div>
+</div>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    button p {
+        font-size: 70px;
+    }
+
+    .items .item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        transition: all 300ms ease-in-out;
+        z-index: -1;
+        opacity: 0;
+        text-align: center;
+    }
+
+    .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .item.active {
+        opacity: 1;
+        z-index: 99;
+        box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+    }
+
+    .item.prev {
+        z-index: 2;
+        opacity: 0.5;
+        transform: translate(-125%, -50%);
+    }
+
+    .item.prev1 {
+        z-index: 1;
+        opacity: 0.2;
+        transform: translate(-195%, -50%);
+    }
+
+    .item.next {
+        z-index: 2;
+        opacity: 0.5;
+        transform: translate(25%, -50%);
+    }
+
+    .item.next1 {
+        z-index: 1;
+        opacity: 0.2;
+        transform: translate(100%, -50%);
+    }
+
+    .pizza {
+        transition: all 0.3s;
+        opacity: 1;
+    }
+
+    .pizza.prev {
+        transition: all 0.3s;
+        opacity: 0;
+    }
+
+    .pizza.next {
+        transition: all 0.3s;
+        opacity: 0;
+    }
+
+    .items .button-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 525px;
+        z-index: 100;
+    }
+
+    .button-container .button {
+        color: #fff;
+        font-size: 32px;
+        cursor: pointer;
+        position: relative;
+        opacity: 0.75;
+        transition: all 300ms ease-in-out;
+    }
+
+    .button-container .button:hover {
+        opacity: 1;
+    }
+
+    .button-container .button:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 1);
+        border-radius: 50%;
+        z-index: -99;
+    }
+
+    .button-container .button:nth-child(1) {
+        float: left;
+    }
+
+    .button-container .button:nth-child(2) {
+        float: right;
+    }
+</style>
+<script>
+    // I will be creating a different pen with touch support but right // now I have no time for it due to school
+
+    const slider = document.querySelector(".items");
+    const slides = document.querySelectorAll(".item");
+    const button = document.querySelectorAll(".button");
+    const pizza = document.querySelectorAll(".pizza")
+
+    let current = 0;
+    let prev = 9;
+    let next = 1;
+
+    for (let i = 0; i < button.length; i++) {
+        button[i].addEventListener("click", () => i == 0 ? gotoPrev() : gotoNext());
+    }
+
+    const gotoPrev = () => current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
+
+    const gotoNext = () => current < 9 ? gotoNum(current + 1) : gotoNum(0);
+
+    const gotoNum = number => {
+        current = number;
+        prev = current - 1;
+        next = current + 1;
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+            slides[i].classList.remove("prev");
+            slides[i].classList.remove("next");
+        }
+        for (let i = 0; i < slides.length; i++) {
+            pizza[i].classList.remove("active");
+            pizza[i].classList.remove("prev");
+            pizza[i].classList.remove("next");
+        }
+
+        if (next === 10) {
+            next = 0;
+        }
+
+        if (prev === -1) {
+            prev = 9;
+        }
+
+        slides[current].classList.add("active");
+        slides[prev].classList.add("prev");
+        slides[next].classList.add("next");
+        pizza[current].classList.add("active");
+        pizza[prev].classList.add("prev");
+        pizza[next].classList.add("next");
+    }
+</script>
+</body>
+</html>
